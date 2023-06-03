@@ -258,6 +258,9 @@ select {
     width: 30px;
     height: 30px;
   }
+  .header__user-nav .burger-menu:active .login-buttons {
+    display: flex;
+  }
   .header__user-nav .burger-menu span {
     width: 15px;
     height: 2px;
@@ -276,9 +279,6 @@ select {
     top: calc(50% + 5px);
     left: calc(100% - 3.5px);
     width: 7px;
-  }
-  .header__user-nav .burger-menu:hover .login-buttons {
-    display: flex;
   }
   .header__user-menu .dropdown-menu {
     position: relative;

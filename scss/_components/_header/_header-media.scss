@@ -69,6 +69,10 @@
                 position: relative;
                 width: 30px;
                 height: 30px;
+                
+                &:active .login-buttons{
+                    display: flex;
+                }
 
                 span {
                     width: 15px;
@@ -90,10 +94,6 @@
                         left: calc(100% - 3.5px);
                         width: 7px;
                     }
-                }
-
-                &:hover .login-buttons{
-                    display: flex;
                 }
             }
         }
