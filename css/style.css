@@ -169,7 +169,7 @@ select {
   text-transform: uppercase;
 }
 .header__user-menu .lang::after {
-  content: url(../../../icons/arrow.svg);
+  content: url(../icons/arrow.svg);
   padding-left: 6.5px;
 }
 .header__user-menu .login-buttons {
@@ -240,6 +240,18 @@ select {
     flex-direction: row-reverse;
     gap: 20px;
   }
+  .header__user-nav ul .login-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -100%;
+    left: calc(100% - 102px);
+    height: 100vh;
+    padding: 10px 0;
+    border: 1px #737373 solid;
+    background-color: #d4c8b5;
+  }
   .header__user-nav .burger-menu {
     position: relative;
     width: 30px;
@@ -264,13 +276,9 @@ select {
     left: calc(100% - 3.5px);
     width: 7px;
   }
-  .header__user-nav ul .login-buttons {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
+  .header__user-nav .burger-menu:hover .login-buttons {
+    display: flex;
     top: 0;
-    right: 0;
   }
   .header__user-menu .dropdown-menu {
     position: relative;

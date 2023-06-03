@@ -49,6 +49,21 @@
             flex-direction: row-reverse;
             gap: 20px;
 
+            ul {
+                .login-buttons {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: absolute;
+                    top: -100%;
+                    left: calc(100% - 102px);
+                    height: 100vh;
+                    padding: 10px 0;
+                    border: 1px #737373 solid;
+                    background-color: #d4c8b5;
+                }
+            }
+
             .burger-menu {
                 position: relative;
                 width: 30px;
@@ -75,16 +90,10 @@
                         width: 7px;
                     }
                 }
-            }
 
-            ul {
-                .login-buttons {
-                    display: none;
-                    flex-direction: column;
-                    align-items: center;
-                    position: absolute;
+                &:hover .login-buttons{
+                    display: flex;
                     top: 0;
-                    right: 0;
                 }
             }
         }
