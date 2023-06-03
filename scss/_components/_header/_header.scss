@@ -24,6 +24,15 @@
         }
     }
 
+    &__user-nav{
+        #menu{
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+        }
+    }
+
     &__pages-menu {
         gap: 50px;
     }
@@ -61,6 +70,7 @@
         .dropdown-menu {
             position: relative;
             display: inline-block;
+            cursor: pointer;
 
             .dropdown-items {
                 display: none;

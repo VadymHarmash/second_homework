@@ -57,6 +57,7 @@
                     position: absolute;
                     top: 0;
                     left: calc(100% - 102px);
+                    transform: translate(100%);
                     z-index: 3;
                     height: 100vh;
                     padding: 10px 0;
@@ -65,14 +66,14 @@
                 }
             }
 
+            #menu:checked .login-buttons{
+                display: flex;
+            }
+
             .burger-menu {
                 position: relative;
                 width: 30px;
                 height: 30px;
-                
-                &:active .login-buttons{
-                    display: flex;
-                }
 
                 span {
                     width: 15px;
