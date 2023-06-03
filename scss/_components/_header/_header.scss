@@ -58,7 +58,11 @@
 
         .login-buttons{
             display: flex;
-            gap: 50px;
+            gap: 45px;
+
+            label {
+                display: none;
+            }
         }
 
         .sign-up {

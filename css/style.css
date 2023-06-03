@@ -180,7 +180,10 @@ select {
 }
 .header__user-menu .login-buttons {
   display: flex;
-  gap: 50px;
+  gap: 45px;
+}
+.header__user-menu .login-buttons label {
+  display: none;
 }
 .header__user-menu .sign-up {
   padding: 10px 20px;
@@ -244,25 +247,34 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+  }
+  .header__user-nav ul {
     flex-direction: row-reverse;
-    gap: 20px;
+    gap: 10px;
   }
   .header__user-nav ul .login-buttons {
-    display: none;
     flex-direction: column;
     align-items: center;
     position: absolute;
     top: 0;
-    left: calc(100% - 102px);
-    transform: translate(100%);
+    left: 0;
     z-index: 3;
-    height: 100vh;
-    padding: 10px 0;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0;
     border: 1px #737373 solid;
     background-color: #d4c8b5;
+    border-radius: 5px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out;
   }
-  .header__user-nav #menu:checked .login-buttons {
-    display: flex;
+  .header__user-nav ul .login-buttons label {
+    display: block;
+    font-size: 0.875em;
+  }
+  .header__user-nav #menu:checked ~ .login-buttons {
+    transform: translateY(0);
   }
   .header__user-nav .burger-menu {
     position: relative;
@@ -273,18 +285,18 @@ select {
     width: 15px;
     height: 2px;
     position: absolute;
-    top: 50%;
+    top: 10px;
     left: calc(100% - 7.5px);
     transform: translate(-50%, -50%);
     background-color: #737373;
   }
   .header__user-nav .burger-menu span:nth-of-type(2) {
-    top: calc(50% - 5px);
+    top: 5px;
     left: calc(100% - 11px);
     width: 22px;
   }
   .header__user-nav .burger-menu span:nth-of-type(3) {
-    top: calc(50% + 5px);
+    top: 15px;
     left: calc(100% - 3.5px);
     width: 7px;
   }
