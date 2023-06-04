@@ -1,0 +1,8 @@
+@mixin subtitle-style ($text-transform) {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1.125em;
+    line-height: 27px;
+    color: #5E6282;
+    text-transform: $text-transform;
+}

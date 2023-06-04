@@ -1,6 +1,6 @@
 .header {
     font-family: "Google Sans";
-    padding: 37px 0 0;
+    padding: 37px 0;
 
     &__wrapper {
         display: grid;
@@ -58,7 +58,12 @@
 
         .login-buttons{
             display: flex;
-            gap: 45px;
+
+            &__auth{
+                display: flex;
+                gap: 45px;
+
+            }
 
             label {
                 display: none;

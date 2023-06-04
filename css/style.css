@@ -30,7 +30,7 @@ select {
   margin: 0 auto;
 }
 
-@media (min-width: 1200px) or ((min-width: 991px) and (max-width: 1199.9px)) {
+@media (min-width: 1200px), ((min-width: 991.99px) and (max-width: 1199.9px)) {
   body {
     background: url(../../images/decore.png);
     background-repeat: no-repeat;
@@ -135,9 +135,34 @@ select {
   font-style: normal;
   font-display: swap;
 }
+.intro__info p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 30px;
+  color: #5E6282;
+}
+
+@keyframes flyAnimation {
+  from {
+    transform: translate(-30%, -60%) rotate(0deg);
+  }
+  25% {
+    transform: translate(240%, -200%);
+  }
+  50% {
+    transform: translate(340%, -300%);
+  }
+  75% {
+    transform: translate(-460%, -300%) rotate(-270deg);
+  }
+  to {
+    transform: translate(-30%, -60%) rotate(-360deg);
+  }
+}
 .header {
   font-family: "Google Sans";
-  padding: 37px 0 0;
+  padding: 37px 0;
 }
 .header__wrapper {
   display: grid;
@@ -179,6 +204,9 @@ select {
   padding-left: 6.5px;
 }
 .header__user-menu .login-buttons {
+  display: flex;
+}
+.header__user-menu .login-buttons__auth {
   display: flex;
   gap: 45px;
 }
@@ -249,39 +277,40 @@ select {
     align-items: center;
     gap: 10px;
   }
-  .header__user-nav ul {
+  .header__user-menu {
     flex-direction: row-reverse;
     gap: 10px;
   }
-  .header__user-nav ul .login-buttons {
-    flex-direction: column;
+  .header__user-menu .login-buttons {
+    justify-content: center;
     align-items: center;
+    flex-direction: row-reverse;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 3;
-    gap: 20px;
+    gap: 90px;
     width: 100%;
-    padding: 20px 0;
+    padding: 30px 0;
     border: 1px #737373 solid;
     background-color: #d4c8b5;
     border-radius: 5px;
     transform: translateY(-100%);
     transition: transform 0.3s ease-out;
   }
-  .header__user-nav ul .login-buttons label {
+  .header__user-menu .login-buttons label {
     display: block;
     font-size: 0.875em;
   }
-  .header__user-nav #menu:checked ~ .login-buttons {
+  .header #menu:checked ~ .login-buttons {
     transform: translateY(0);
   }
-  .header__user-nav .burger-menu {
+  .header .burger-menu {
     position: relative;
     width: 30px;
     height: 30px;
   }
-  .header__user-nav .burger-menu span {
+  .header .burger-menu span {
     width: 15px;
     height: 2px;
     position: absolute;
@@ -290,35 +319,35 @@ select {
     transform: translate(-50%, -50%);
     background-color: #737373;
   }
-  .header__user-nav .burger-menu span:nth-of-type(2) {
+  .header .burger-menu span:nth-of-type(2) {
     top: 5px;
     left: calc(100% - 11px);
     width: 22px;
   }
-  .header__user-nav .burger-menu span:nth-of-type(3) {
+  .header .burger-menu span:nth-of-type(3) {
     top: 15px;
     left: calc(100% - 3.5px);
     width: 7px;
   }
-  .header__user-menu .dropdown-menu {
+  .header .burger-menu .dropdown-menu {
     position: relative;
     display: inline-block;
   }
-  .header__user-menu .dropdown-menu .dropdown-items {
+  .header .burger-menu .dropdown-menu .dropdown-items {
     display: none;
     position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
   }
-  .header__user-menu .dropdown-menu:hover .dropdown-items {
+  .header .burger-menu .dropdown-menu:hover .dropdown-items {
     display: block;
     background-color: #FFF1DA;
   }
-  .header__user-menu .dropdown-menu:hover .dropdown-items li {
+  .header .burger-menu .dropdown-menu:hover .dropdown-items li {
     text-align: center;
     padding: 3px 8px;
   }
-  .header__user-menu .dropdown-menu:hover .dropdown-items li:hover {
+  .header .burger-menu .dropdown-menu:hover .dropdown-items li:hover {
     background-color: #FFFFFF;
   }
 }
@@ -337,5 +366,156 @@ select {
   }
   .header__user-nav {
     grid-column: 4/6;
+  }
+  .header__user-menu .login-buttons {
+    gap: 50px;
+  }
+}
+.intro .mobile-crosses {
+  display: none;
+}
+.intro__wrapper {
+  display: flex;
+  padding: 110px 0 90px;
+}
+.intro__info {
+  flex-basis: 50%;
+}
+.intro__info h2 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #DF6951;
+}
+.intro__info h1 {
+  font-family: "Volkhov";
+  font-weight: 700;
+  font-size: 5.25em;
+  line-height: 89px;
+  letter-spacing: -0.04em;
+  color: #181E4B;
+  margin: 30px 0 25px;
+}
+.intro__info p {
+  width: 80%;
+}
+.intro__info__buttons {
+  margin: 50px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.intro__info__buttons a {
+  background: #F1A501;
+  box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+  border-radius: 10px;
+  padding: 19px 27px;
+  font-family: "Google Sans";
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 23px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.intro__info__buttons .demo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.intro__info__buttons .demo .player {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #DF6951;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.intro__info__buttons .demo .player::after {
+  content: "Play Demo";
+  position: absolute;
+  white-space: nowrap;
+  left: 70px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.0625em;
+  line-height: 26px;
+  color: #686D77;
+}
+.intro__image .plane {
+  position: absolute;
+}
+.intro__image .moving-plane {
+  left: 50%;
+  transform: translate(-30%, -60%);
+}
+.intro__image .moving-plane:hover {
+  animation: flyAnimation linear 3s 1;
+}
+.intro__image .static-plane {
+  z-index: -1;
+  right: 5%;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .intro__image .moving-plane {
+    left: 46%;
+  }
+}
+@media screen and (min-width: 1200px), ((min-width: 991.99px) and (max-width: 1199.9px)) {
+  .intro__wrapper {
+    background-image: url(../../../../images/traveller.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .intro {
+    position: relative;
+  }
+  .intro .mobile-crosses {
+    display: block;
+    position: absolute;
+    top: 75%;
+    right: 0;
+    z-index: -1;
+  }
+  .intro__wrapper {
+    padding: 30px 0 0;
+  }
+  .intro__info {
+    flex-basis: 100%;
+  }
+  .intro__info h2 {
+    display: none;
+  }
+  .intro__info h1 {
+    margin: 110px 20px 25px;
+    font-size: 3em;
+    line-height: 89px;
+    letter-spacing: -0.04em;
+  }
+  .intro__info p {
+    display: none;
+  }
+  .intro__info__buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .intro__info__buttons .demo .player {
+    margin-right: 125px;
+  }
+  .intro__image .moving-plane {
+    display: none;
+  }
+  .intro__image .static-plane {
+    z-index: -1;
+    left: 0;
   }
 }/*# sourceMappingURL=style.css.map */

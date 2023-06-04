@@ -1,0 +1,108 @@
+.intro {
+    .mobile-crosses {
+        display: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        padding: 110px 0 90px;
+    }
+
+    &__info {
+        flex-basis: 50%;
+
+        h2 {
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 1.25em;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: #DF6951;
+        }
+
+        h1 {
+            font-family: 'Volkhov';
+            font-weight: 700;
+            font-size: 5.25em;
+            line-height: 89px;
+            letter-spacing: -0.04em;
+            color: #181E4B;
+            margin: 30px 0 25px;
+        }
+
+        p {
+            @extend %paragraph-style;
+            width: 80%;
+        }
+
+        &__buttons {
+            margin: 50px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+
+            a {
+                background: #F1A501;
+                box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+                border-radius: 10px;
+                padding: 19px 27px;
+                font-family: 'Google Sans';
+                font-weight: 500;
+                font-size: 1.125em;
+                line-height: 23px;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+
+            .demo {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .player {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: #DF6951;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    &::after {
+                        content: 'Play Demo';
+                        position: absolute;
+                        white-space: nowrap;
+                        left: 70px;
+                        font-family: 'Poppins';
+                        font-weight: 500;
+                        font-size: 1.0625em;
+                        line-height: 26px;
+                        color: #686D77;
+                    }
+                }
+            }
+        }
+    }
+
+    &__image {
+        .plane {
+            position: absolute;
+        }
+
+        .moving-plane {
+            left: 50%;
+            transform: translate(-30%, -60%);
+
+            &:hover {
+                animation: flyAnimation linear 3s 1;
+            }
+        }
+
+        .static-plane {
+            z-index: -1;
+            right: 5%;
+        }
+    }
+}

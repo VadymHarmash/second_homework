@@ -1,0 +1,84 @@
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .intro__image .moving-plane {
+        left: 46%;
+    }
+}
+
+@media screen and (min-width: 1200px),
+((min-width: 991.99px) and (max-width: 1199.9px)) {
+    .intro {
+        &__wrapper {
+            background-image: url(../../../../images/traveller.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .intro {
+        position: relative;
+
+        .mobile-crosses {
+            display: block;
+            position: absolute;
+            top: 75%;
+            right: 0;
+            z-index: -1;
+        }
+
+        &__wrapper {
+            padding: 30px 0 0;
+        }
+
+        &__info {
+            flex-basis: 100%;
+
+            h2 {
+                display: none;
+            }
+
+            h1 {
+                margin: 110px 20px 25px;
+                font-size: 3em;
+                line-height: 89px;
+                letter-spacing: -0.04em;
+            }
+
+            p {
+                display: none;
+            }
+
+            &__buttons {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .demo .player {
+                    margin-right: 125px;
+                }
+            }
+        }
+
+        &__image {
+            .moving-plane {
+                display: none;
+            }
+
+            .static-plane {
+                z-index: -1;
+                left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {}
+
+@media screen and (min-width: 481px) and (max-width: 767.98px) {}
+
+@media screen and ((min-width: 320px) and (max-width: 480.98px)),
+(max-width: 319.98px) {}
