@@ -10,10 +10,7 @@
 ((min-width: 991.99px) and (max-width: 1199.9px)) {
     .intro {
         &__wrapper {
-            background-image: url(../images/traveller.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: right;
+            background: url(../images/traveller.png) right / contain no-repeat;
         }
     }
 }
@@ -24,10 +21,6 @@
 
         .mobile-crosses {
             display: block;
-            position: absolute;
-            top: 75%;
-            right: 0;
-            z-index: -1;
         }
 
         &__wrapper {

@@ -1,0 +1,72 @@
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .destinations {
+        &__wrapper {
+            .decore {
+                left: 92%;
+            }
+        }
+
+        &__cards {
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .destinations {
+        .mobile-crosses {
+            display: block;
+        }
+
+        &__wrapper {
+            position: relative;
+            padding-top: 18px;
+
+            h4 {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10%;
+            }
+
+            h2 {
+                font-size: 2.5em;
+                margin: 0 auto 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                line-height: 51.6px;
+            }
+
+            .decore {
+                display: none;
+            }
+        }
+
+        &__cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {}
+
+@media screen and (min-width: 481px) and (max-width: 767.98px) {}
+
+@media screen and ((min-width: 320px) and (max-width: 480.98px)),
+(max-width: 480.98px) {
+    .destinations {
+        &__card {
+            transform: scale(0.95);
+
+            &:hover {
+                transform: scale(1);
+            }
+        }
+    }
+}

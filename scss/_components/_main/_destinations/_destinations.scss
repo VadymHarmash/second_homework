@@ -1,0 +1,91 @@
+.destinations {
+    margin-bottom: 185px;
+    position: relative;
+
+    .mobile-crosses {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__wrapper {
+        position: relative;
+
+        h4 {
+            @include subtitle-style(capitalize);
+            text-align: center;
+        }
+
+        h2 {
+            @extend %title-style;
+            margin-bottom: 60px;
+        }
+
+        .decore {
+            position: absolute;
+            top: 40%;
+            left: 90%;
+            z-index: -1;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        position: relative;
+    }
+
+    &__card {
+        border-radius: 24px;
+        filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+        cursor: pointer;
+        transition: transform .3s, filter .3s;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0px 0px 23px #0F37A3);
+        }
+
+        &__image {
+            position: relative;
+        }
+
+        &__info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #FFFFFF;
+            padding: 30px 20px 40px 25px;
+            border-radius: 0 0 24px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+
+            p {
+                font-family: 'Poppins';
+                font-weight: 500;
+                font-size: 1.125em;
+                line-height: 124.5%;
+                color: #5E6282;
+            }
+
+            .place-price {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .days {
+                font-size: 1em;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                &::before {
+                    content: url(../icons/trip-arrow.svg);
+                }
+            }
+        }
+    }
+}

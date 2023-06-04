@@ -6,9 +6,7 @@
 @media (min-width: 1200px),
 ((min-width: 991.99px) and (max-width: 1199.9px)) {
     body {
-        background-image: url(../images/decore.png);
-        background-repeat: no-repeat;
-        background-position: right top;
+        background: url(../images/decore.png) right top no-repeat;
     }
 }
 
