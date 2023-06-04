@@ -1,4 +1,6 @@
 .intro {
+    margin-bottom: 130px;
+
     .mobile-crosses {
         display: none;
     }
@@ -11,7 +13,7 @@
     &__info {
         flex-basis: 50%;
 
-        h2 {
+        h3 {
             font-family: 'Poppins';
             font-weight: 700;
             font-size: 1.25em;
@@ -45,13 +47,20 @@
                 background: #F1A501;
                 box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
                 border-radius: 10px;
-                padding: 19px 27px;
+                padding: 18px 26px;
+                border: 1px #F1A501 solid;
                 font-family: 'Google Sans';
                 font-weight: 500;
                 font-size: 1.125em;
                 line-height: 23px;
                 color: #FFFFFF;
                 text-decoration: none;
+                transition: color .2s, background-color .2s;
+
+                &:hover {
+                    color: #F1A501;
+                    background-color: #FFFFFF;
+                }
             }
 
             .demo {
