@@ -37,8 +37,9 @@
         }
 
         p {
-            @extend %paragraph-style;
-            width: 80%;
+            @include paragraph-style (500, 1em);
+            line-height: 30px;
+            width: 78%;
         }
 
         &__buttons {

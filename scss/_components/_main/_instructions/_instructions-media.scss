@@ -1,0 +1,65 @@
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .instructions {
+        &__wrapper {
+            gap: 20px;
+        }
+
+        &__progress {
+            top: 70%;
+            left: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .instructions {
+        .mobile-crosses {
+            display: block;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            h2{
+                text-align: center;
+            }
+
+            h4 {
+                display: none;
+            }
+        }
+
+        &__progress {
+            display: none;
+        }
+
+        &__info {
+            width: 100%;
+        }
+
+        &__list .text p {
+            width: 100%;
+        }
+
+        &__card {
+            align-self: center;
+            padding: 15px 20px 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {}
+
+@media screen and (min-width: 481px) and (max-width: 767.98px) {}
+
+@media screen and ((min-width: 320px) and (max-width: 480.98px)),
+(max-width: 480.98px) {
+    .instructions{
+        &__card {
+            transform: scale(0.8);
+        }
+    }
+}

@@ -133,15 +133,7 @@ select {
   font-style: normal;
   font-display: swap;
 }
-.intro__info p {
-  font-family: "Poppins";
-  font-weight: 500;
-  font-size: 1em;
-  line-height: 30px;
-  color: #5E6282;
-}
-
-.destinations__wrapper h2, .category__wrapper h2 {
+.instructions__wrapper h2, .destinations__wrapper h2, .category__wrapper h2 {
   font-family: "Volkhov";
   font-weight: 700;
   font-size: 3.125em;
@@ -424,7 +416,12 @@ select {
   margin: 30px 0 25px;
 }
 .intro__info p {
-  width: 80%;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1em;
+  color: #5E6282;
+  line-height: 30px;
+  width: 78%;
 }
 .intro__info__buttons {
   margin: 50px 0 0;
@@ -646,8 +643,8 @@ select {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 1em;
-  line-height: 26px;
   color: #5E6282;
+  line-height: 26px;
 }
 
 @media screen and (max-width: 991.98px) {
@@ -778,8 +775,8 @@ select {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 1.125em;
-  line-height: 124.5%;
   color: #5E6282;
+  line-height: 124.5%;
 }
 .destinations__card__info .place-price {
   display: flex;
@@ -796,14 +793,30 @@ select {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .destinations {
+    margin-bottom: 160px;
+  }
+  .destinations__wrapper h2 {
+    margin-bottom: 20px;
+  }
   .destinations__wrapper .decore {
-    left: 92%;
+    left: 90%;
   }
   .destinations__cards {
-    gap: 10px;
+    justify-content: center;
+    gap: 0;
+  }
+  .destinations__card {
+    transform: scale(0.8);
+  }
+  .destinations__card:hover {
+    transform: scale(0.9);
   }
 }
 @media screen and (max-width: 991.98px) {
+  .destinations {
+    margin-bottom: 80px;
+  }
   .destinations .mobile-crosses {
     display: block;
   }
@@ -833,6 +846,7 @@ select {
   .destinations__cards {
     flex-direction: column;
     align-items: center;
+    gap: 75px;
   }
 }
 @media screen and ((min-width: 320px) and (max-width: 480.98px)), (max-width: 480.98px) {
@@ -841,5 +855,228 @@ select {
   }
   .destinations__card:hover {
     transform: scale(1);
+  }
+}
+.instructions {
+  margin-bottom: 200px;
+  position: relative;
+}
+.instructions .mobile-crosses {
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.instructions .bottom-crosses {
+  top: 89%;
+  right: 0;
+  z-index: 1;
+}
+.instructions__wrapper {
+  padding-top: 140px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  position: relative;
+}
+.instructions__wrapper h4 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.125em;
+  line-height: 27px;
+  color: #5E6282;
+  text-transform: none;
+}
+.instructions__wrapper h2 {
+  text-align: left;
+  margin: 15px 0 30px;
+}
+.instructions__progress {
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  z-index: 1;
+  background-color: #FFFFFF;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  border-radius: 18px;
+  padding: 15px 25px 20px;
+  display: flex;
+  gap: 12px;
+}
+.instructions__progress .info p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1em;
+  color: #5E6282;
+  line-height: 124.5%;
+  letter-spacing: -0.02em;
+  color: #84829A;
+}
+.instructions__progress .info h5 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #5E6282;
+  margin: 6px 0 14px;
+}
+.instructions__progress .info .progress-text {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #5E6282;
+  line-height: 124.5%;
+  letter-spacing: -0.055em;
+  color: #080809;
+}
+.instructions__progress .info .progress-text span {
+  color: #8A79DF;
+}
+.instructions__progress .info div {
+  height: 5px;
+  border-radius: 30px;
+}
+.instructions__progress .info .progress-bar {
+  margin-top: 10px;
+  background-color: #F5F5F5;
+  width: 155px;
+}
+.instructions__progress .info .progress-bar .progressed {
+  width: 40%;
+  background-color: #8A79DF;
+}
+.instructions__info {
+  width: 45%;
+}
+.instructions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.instructions__list__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.instructions__list__item .text {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 124.5%;
+  color: #5E6282;
+}
+.instructions__list__item .text h5 {
+  font-weight: 700;
+}
+.instructions__list__item .text p {
+  width: 80%;
+}
+.instructions__card {
+  padding: 20px 25px 30px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(65px -72px 75px rgba(89, 177, 230, 0.8));
+  border-radius: 26px;
+  align-self: flex-end;
+  position: relative;
+}
+.instructions__card .travel-photo {
+  border-radius: 24px;
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.instructions__card h5 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #5E6282;
+  line-height: 124.5%;
+  letter-spacing: 0.015em;
+  color: #080809;
+  margin: 25px 0 15px;
+}
+.instructions__card__info {
+  display: flex;
+  gap: 15px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 124.5%;
+  letter-spacing: -0.005em;
+  color: #84829A;
+}
+.instructions__card__icons {
+  display: flex;
+  gap: 18px;
+  margin: 20px 0 30px;
+}
+.instructions__card__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instructions__card__mark {
+  display: flex;
+  justify-content: space-between;
+}
+.instructions__card__mark p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1em;
+  color: #5E6282;
+  line-height: 124.5%;
+  letter-spacing: -0.02em;
+  color: #84829A;
+}
+.instructions__card__mark p::before {
+  content: url(../icons/skyscraper.svg);
+  padding-right: 15px;
+}
+.instructions__card__mark img {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .instructions__wrapper {
+    gap: 20px;
+  }
+  .instructions__progress {
+    top: 70%;
+    left: 70%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .instructions .mobile-crosses {
+    display: block;
+  }
+  .instructions__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .instructions__wrapper h2 {
+    text-align: center;
+  }
+  .instructions__wrapper h4 {
+    display: none;
+  }
+  .instructions__progress {
+    display: none;
+  }
+  .instructions__info {
+    width: 100%;
+  }
+  .instructions__list .text p {
+    width: 100%;
+  }
+  .instructions__card {
+    align-self: center;
+    padding: 15px 20px 30px;
+  }
+}
+@media screen and ((min-width: 320px) and (max-width: 480.98px)), (max-width: 480.98px) {
+  .instructions__card {
+    transform: scale(0.8);
   }
 }/*# sourceMappingURL=style.css.map */

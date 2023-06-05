@@ -6,3 +6,10 @@
     color: #5E6282;
     text-transform: $text-transform;
 }
+
+@mixin paragraph-style ($weight, $size){
+    font-family: 'Poppins';
+    font-weight: $weight;
+    font-size: $size;
+    color: #5E6282;
+}

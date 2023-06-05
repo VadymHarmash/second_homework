@@ -1,0 +1,190 @@
+.instructions {
+    margin-bottom: 200px;
+    position: relative;
+
+    .mobile-crosses {
+        display: none;
+        position: absolute;
+        top: 0;
+    }
+
+    .bottom-crosses{
+        top: 89%;
+        right: 0;
+        z-index: 1;
+    }
+
+    &__wrapper {
+        padding-top: 140px;
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        position: relative;
+
+        h4 {
+            @include subtitle-style(none);
+        }
+
+        h2 {
+            @extend %title-style;
+            text-align: left;
+            margin: 15px 0 30px;
+        }
+    }
+    &__progress {
+        position: absolute;
+        top: 60%;
+        left: 75%;
+        z-index: 1;
+        background-color: #FFFFFF;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+        border-radius: 18px;
+        padding: 15px 25px 20px;
+        display: flex;
+        gap: 12px;
+
+        .info {
+            p {
+                @include paragraph-style (500, 1em);
+                line-height: 124.5%;
+                letter-spacing: -0.02em;
+                color: #84829A;
+            }
+
+            h5 {
+                @include paragraph-style (500, 1.125em);
+                margin: 6px 0 14px;
+            }
+
+            .progress-text {
+                @include paragraph-style (500, 0.875em);
+                line-height: 124.5%;
+                letter-spacing: -0.055em;
+                color: #080809;
+
+                span {
+                    color: #8A79DF;
+                }
+            }
+
+            div{
+                height: 5px;
+                border-radius: 30px;
+            }
+
+            .progress-bar{
+                margin-top: 10px;
+                background-color: #F5F5F5;
+                width: 155px;
+                .progressed{
+                    width: 40%;
+                    background-color: #8A79DF;
+                }
+            }
+        }
+    }
+
+    &__info {
+        width: 45%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .text {
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 1em;
+                line-height: 124.5%;
+                color: #5E6282;
+
+                h5 {
+                    font-weight: 700;
+                }
+
+                p {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    &__card {
+        padding: 20px 25px 30px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(65px -72px 75px rgba(89, 177, 230, 0.8));
+        border-radius: 26px;
+        align-self: flex-end;
+        position: relative;
+
+        .travel-photo {
+            border-radius: 24px;
+            border: 1px solid #000000;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        h5 {
+            @include paragraph-style (500, 1.125em);
+            line-height: 124.5%;
+            letter-spacing: 0.015em;
+            color: #080809;
+            margin: 25px 0 15px;
+        }
+
+        &__info {
+            display: flex;
+            gap: 15px;
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 1em;
+            line-height: 124.5%;
+            letter-spacing: -0.005em;
+            color: #84829A;
+        }
+
+        &__icons {
+            display: flex;
+            gap: 18px;
+            margin: 20px 0 30px;
+        }
+
+        &__icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__mark {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                @include paragraph-style (500, 1em);
+                line-height: 124.5%;
+                letter-spacing: -0.02em;
+                color: #84829A;
+
+                &::before {
+                    content: url(../icons/skyscraper.svg);
+                    padding-right: 15px;
+                }
+            }
+
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+}

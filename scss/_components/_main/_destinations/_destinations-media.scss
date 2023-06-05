@@ -2,20 +2,34 @@
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
     .destinations {
+        margin-bottom: 160px;
         &__wrapper {
+            h2{
+                margin-bottom: 20px;
+            }
             .decore {
-                left: 92%;
+                left: 90%;
             }
         }
 
         &__cards {
-            gap: 10px;
+            justify-content: center;
+            gap: 0;
+        }
+
+        &__card {
+            transform: scale(0.8);
+
+            &:hover {
+                transform: scale(0.9);
+            }
         }
     }
 }
 
 @media screen and (max-width: 991.98px) {
     .destinations {
+        margin-bottom: 80px;
         .mobile-crosses {
             display: block;
         }
@@ -50,6 +64,7 @@
         &__cards {
             flex-direction: column;
             align-items: center;
+            gap: 75px;
         }
     }
 }

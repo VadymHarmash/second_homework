@@ -64,11 +64,8 @@
             width: 100%;
 
             p {
-                font-family: 'Poppins';
-                font-weight: 500;
-                font-size: 1.125em;
+                @include paragraph-style (500, 1.125em);
                 line-height: 124.5%;
-                color: #5E6282;
             }
 
             .place-price {
