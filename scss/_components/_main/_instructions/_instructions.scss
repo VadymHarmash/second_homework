@@ -5,17 +5,12 @@
     .mobile-crosses {
         display: none;
         position: absolute;
-        top: 0;
-    }
-
-    .bottom-crosses{
         top: 89%;
         right: 0;
         z-index: 1;
     }
 
     &__wrapper {
-        padding-top: 140px;
         display: flex;
         justify-content: center;
         gap: 60px;

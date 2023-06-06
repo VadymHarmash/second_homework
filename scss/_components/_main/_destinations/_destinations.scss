@@ -8,6 +8,11 @@
         z-index: 1;
     }
 
+    .bottom-crosses{
+        top: 96%;
+        z-index: -1;
+    }
+
     &__wrapper {
         position: relative;
 

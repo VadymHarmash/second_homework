@@ -7,3 +7,16 @@
     text-transform: capitalize;
     color: #14183E;
 }
+
+%button-style {
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+    padding: 25px 50px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 1.0625em;
+    line-height: 23px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
