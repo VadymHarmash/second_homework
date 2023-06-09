@@ -1349,4 +1349,109 @@ select {
   .subscription__button::after {
     left: calc(100% + 10px);
   }
+}
+.footer__wrapper__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.footer__wrapper__flex__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer__wrapper__flex__item h2 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 2.75em;
+  line-height: 66px;
+  color: #181E4B;
+}
+.footer__wrapper__flex__item p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 0.8125em;
+  color: #5E6282;
+}
+.footer__wrapper__flex__item h4 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 1.3125em;
+  line-height: 124.5%;
+  color: #080809;
+  margin: 20px 0;
+}
+.footer__wrapper__flex__item nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer__wrapper__flex__item nav ul li a {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #5E6282;
+  text-decoration: none;
+}
+.footer__wrapper__flex__item nav:first-child ul {
+  gap: 12px;
+}
+.footer__wrapper__flex__item nav:last-child ul {
+  gap: 20px;
+}
+.footer__logo {
+  align-self: start;
+  gap: 20px;
+  width: 20%;
+}
+.footer__media {
+  justify-content: center;
+  gap: 85px;
+}
+.footer__media nav ul {
+  flex-direction: row;
+}
+.footer__media__stores {
+  position: relative;
+}
+.footer__media__stores::before {
+  content: "Discover our app";
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #5E6282;
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 15px);
+}
+.footer__mark p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #5E6282;
+  text-align: center;
+  margin: 80px auto;
+}
+
+@media screen and (max-width: 991.98px) {
+  .footer {
+    background-color: #FFF1DA;
+  }
+  .footer__wrapper__flex {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .footer__wrapper__flex__item {
+    width: 100%;
+  }
+  .footer__logo {
+    width: 50%;
+  }
+  .footer__media ul {
+    justify-content: center;
+  }
+  .footer__mark p {
+    margin: 50px auto 25px;
+  }
 }/*# sourceMappingURL=style.css.map */

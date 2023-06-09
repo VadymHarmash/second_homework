@@ -1,0 +1,89 @@
+.footer {
+    &__wrapper__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            h2 {
+                font-family: 'Poppins';
+                font-weight: 500;
+                font-size: 2.75em;
+                line-height: 66px;
+                color: #181E4B;
+            }
+
+            p {
+                @include paragraph-style (500, 0.8125em);
+            }
+
+            h4 {
+                font-family: 'Poppins';
+                font-weight: 700;
+                font-size: 1.3125em;
+                line-height: 124.5%;
+                color: #080809;
+                margin: 20px 0;
+            }
+
+            nav {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    li a {
+                        @include paragraph-style (500, 1.125em);
+                        text-decoration: none;
+                    }
+                }
+
+                &:first-child ul {
+                    gap: 12px;
+                }
+
+                &:last-child ul {
+                    gap: 20px;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        align-self: start;
+        gap: 20px;
+        width: 20%;
+    }
+
+    &__media {
+        justify-content: center;
+        gap: 85px;
+
+        nav ul {
+            flex-direction: row;
+        }
+
+        &__stores {
+            position: relative;
+
+            &::before {
+                content: 'Discover our app';
+                @include paragraph-style (500, 1.25em);
+                position: absolute;
+                left: 0;
+                bottom: calc(100% + 15px);
+            }
+        }
+    }
+
+    &__mark p {
+        @include paragraph-style (500, 0.875em);
+        text-align: center;
+        margin: 80px auto;
+    }
+}
