@@ -277,7 +277,9 @@ select {
     grid-template-rows: repeat(1, 1fr 2fr);
   }
   .header__logo {
-    place-self: center;
+    justify-self: center;
+    align-self: start;
+    margin: 10px 0 0;
   }
   .header__pages-nav {
     grid-area: 2/2/3/3;
@@ -292,7 +294,8 @@ select {
   }
   .header__user-nav {
     grid-column: 3;
-    place-self: center;
+    justify-self: center;
+    align-self: start;
     padding: 7px 0 0;
     display: flex;
     justify-content: space-between;
@@ -356,7 +359,6 @@ select {
   .header__wrapper {
     grid-template-columns: repeat(1, 1fr 1fr 1fr 1fr 1fr);
     grid-template-rows: repeat(1, 1fr 2fr);
-    align-items: center;
   }
   .header__logo {
     grid-column: 1/3;

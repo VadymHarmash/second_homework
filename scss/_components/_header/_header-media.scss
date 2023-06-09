@@ -13,7 +13,9 @@
         }
 
         &__logo {
-            place-self: center;
+            justify-self: center;
+            align-self: start;
+            margin: 10px 0 0;
         }
 
         &__pages-nav {
@@ -36,7 +38,8 @@
 
         &__user-nav {
             grid-column: 3;
-            place-self: center;
+            justify-self: center;
+            align-self: start;
             padding: 7px 0 0;
             display: flex;
             justify-content: space-between;
@@ -116,7 +119,6 @@
         &__wrapper {
             grid-template-columns: repeat(1, 1fr 1fr 1fr 1fr 1fr);
             grid-template-rows: repeat(1, 1fr 2fr);
-            align-items: center;
         }
 
         &__logo {
