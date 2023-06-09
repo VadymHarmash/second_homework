@@ -39,55 +39,55 @@
         justify-content: center;
         gap: 40px;
         position: relative;
-    }
-
-    &__card {
-        border-radius: 24px;
-        filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02));
-        cursor: pointer;
-        transition: transform .3s, filter .3s;
-
-        &:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0px 0px 23px #0F37A3);
-        }
-
-        &__image {
-            position: relative;
-        }
-
-        &__info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: #FFFFFF;
-            padding: 30px 20px 40px 25px;
-            border-radius: 0 0 24px 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
-
-            p {
-                @include paragraph-style (500, 1.125em);
-                line-height: 124.5%;
+        &__card {
+            border-radius: 24px;
+            filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02));
+            cursor: pointer;
+            transition: transform .3s, filter .3s;
+    
+            &:hover {
+                transform: scale(1.05);
+                filter: drop-shadow(0px 0px 23px #0F37A3);
             }
-
-            .place-price {
-                display: flex;
-                justify-content: space-between;
+    
+            &__image {
+                position: relative;
             }
-
-            .days {
-                font-size: 1em;
+    
+            &__info {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: #FFFFFF;
+                padding: 30px 20px 40px 25px;
+                border-radius: 0 0 24px 24px;
                 display: flex;
-                align-items: center;
-                gap: 15px;
-
-                &::before {
-                    content: url(../icons/trip-arrow.svg);
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+    
+                p {
+                    @include paragraph-style (500, 1.125em);
+                    line-height: 124.5%;
+                }
+    
+                .place-price {
+                    display: flex;
+                    justify-content: space-between;
+                }
+    
+                .days {
+                    font-size: 1em;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+    
+                    &::before {
+                        content: url(../icons/trip-arrow.svg);
+                    }
                 }
             }
         }
     }
+
 }

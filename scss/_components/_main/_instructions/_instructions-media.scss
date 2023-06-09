@@ -32,21 +32,20 @@
             }
         }
 
-        &__progress {
-            display: none;
-        }
-
         &__info {
             width: 100%;
-        }
-
-        &__list .text p {
-            width: 100%;
+            &__list .text p {
+                width: 100%;
+            }
         }
 
         &__card {
             align-self: center;
             padding: 15px 20px 30px;
+        }
+
+        &__progress {
+            display: none;
         }
     }
 }

@@ -10,27 +10,25 @@
         &__wrapper {
             grid-template-columns: repeat(1, 1fr 1fr 1fr);
             grid-template-rows: repeat(1, 1fr 2fr);
-            align-items: center;
         }
 
         &__logo {
             place-self: center;
         }
 
-
         &__pages-nav {
             grid-area: 2 / 2 / 3 / 3;
-        }
 
-        &__pages-menu {
-            flex-direction: column;
-            text-align: center;
+            &__menu {
+                flex-direction: column;
+                text-align: center;
 
-            li {
-                a {
-                    &:first-child {
-                        font-size: 1.875em;
-                        color: #737373;
+                li {
+                    a {
+                        &:first-child {
+                            font-size: 1.875em;
+                            color: #737373;
+                        }
                     }
                 }
             }
@@ -44,32 +42,32 @@
             justify-content: space-between;
             align-items: center;
             gap: 10px;
-        }
 
-        &__user-menu {
-            flex-direction: row-reverse;
-            gap: 10px;
-
-            .login-buttons {
-                justify-content: center;
-                align-items: center;
+            &__menu {
                 flex-direction: row-reverse;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 3;
-                gap: 90px;
-                width: 100%;
-                padding: 30px 0;
-                border: 1px #737373 solid;
-                background-color: #d4c8b5;
-                border-radius: 5px;
-                transform: translateY(-100%);
-                transition: transform .3s ease-out;
+                gap: 10px;
 
-                label {
-                    display: block;
-                    font-size: 0.875em;
+                .login-buttons {
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row-reverse;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 3;
+                    gap: 90px;
+                    width: 100%;
+                    padding: 30px 0;
+                    border: 1px #737373 solid;
+                    background-color: #d4c8b5;
+                    border-radius: 5px;
+                    transform: translateY(-100%);
+                    transition: transform .3s ease-out;
+
+                    label {
+                        display: block;
+                        font-size: 0.875em;
+                    }
                 }
             }
         }
@@ -78,8 +76,7 @@
             transform: translateY(0);
         }
 
-
-        .burger-menu {
+        &__burger-menu {
             position: relative;
             width: 30px;
             height: 30px;
@@ -132,10 +129,8 @@
 
         &__user-nav {
             grid-column: 4 / 6;
-        }
 
-        &__user-menu {
-            .login-buttons {
+            &__menu .login-buttons {
                 gap: 50px;
             }
         }

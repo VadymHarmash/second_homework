@@ -15,15 +15,15 @@
         &__cards {
             justify-content: center;
             gap: 0;
-        }
-
-        &__card {
-            transform: scale(0.8);
-
-            &:hover {
-                transform: scale(0.9);
+            &__card {
+                transform: scale(0.8);
+    
+                &:hover {
+                    transform: scale(0.9);
+                }
             }
         }
+
     }
 }
 
@@ -76,7 +76,7 @@
 @media screen and ((min-width: 320px) and (max-width: 480.98px)),
 (max-width: 480.98px) {
     .destinations {
-        &__card {
+        &__cards__card {
             transform: scale(0.95);
 
             &:hover {
