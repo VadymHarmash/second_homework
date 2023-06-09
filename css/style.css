@@ -1437,6 +1437,7 @@ select {
 @media screen and (max-width: 991.98px) {
   .footer {
     background-color: #FFF1DA;
+    padding-top: 15px;
   }
   .footer__wrapper__flex {
     flex-direction: column;
