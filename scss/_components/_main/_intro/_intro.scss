@@ -110,7 +110,8 @@
             transform: translate(-30%, -60%);
 
             &:hover {
-                animation: flyAnimation linear 3s 1;
+                -webkit-animation: flyAnimation linear 3s 1;
+                        animation: flyAnimation linear 3s 1;
             }
         }
 
